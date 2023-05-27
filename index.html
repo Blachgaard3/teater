@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaterkatten</title>
+    <link rel="stylesheet" href="tk.css">
+</head>
+
+<body>
+
+    <nav class="burgerContainer">
+        <input class="checkbox" type="checkbox" name="menu" id="burger-Menu">
+        <section class="burgerMenu">
+            <span class="streg stregTop"></span>
+            <span class="streg stregMidt"></span>
+            <span class="streg stregBund"></span>
+        </section>
+        <nav class="burgerMenuContent">
+            <button class="bmBtn">Drikkevarer</button>
+            <section class="subMenu drinksMenu">
+                <h1>Vores udvalg</h1>
+                <div id="drinksBtnContainer">
+                    <button class="drinksBtn Beer" onclick="visDrinkCategory('beer')">Øl</button>
+                    <button class="drinksBtn hvidHvid" onclick="visDrinkCategory('hvidVin')">HvidVin</button>
+                    <button class="drinksBtn cocktails" onclick="visDrinkCategory('cocktails')">Cocktails</button>
+                    <button class="drinksBtn varmeDrikke" onclick="visDrinkCategory('varmeDrikke')">Varme
+                        drikke</button>
+                    <button class="drinksBtn roseVin" onclick="visDrinkCategory('roseVin')">Rosé</button>
+                    <button class="drinksBtn rødVin" onclick="visDrinkCategory('rødVin')">Rødvin</button>
+                    <button class="drinksBtn mousserendeVinCategory"
+                        onclick="visDrinkCategory('mousserendeVin')">Mousserende</button>
+                    <button class="drinksBtn portVinCategory" onclick="visDrinkCategory('portVin')">Portvin</button>
+                    <button class="drinksBtn romCategory" onclick="visDrinkCategory('rom')">Rom</button>
+                    <button class="drinksBtn ginCategory" onclick="visDrinkCategory('gin')">Gin</button>
+                    <button class="drinksBtn cognacCategory" onclick="visDrinkCategory('cognac')">Cognac</button>
+                    <button class="drinksBtn shotsCategory" onclick="visDrinkCategory('shots')">Shots</button>
+                    <button class="drinksBtn aperitifsCategory"
+                        onclick="visDrinkCategory('aperitifs')">Aperitifs</button>
+                    <button class="drinksBtn drinksCategory" onclick="visDrinkCategory('drinks')">Drinks</button>
+                    <button class="drinksBtn flaskeolCategory" onclick="visDrinkCategory('flaskeol')">Flaskeøl</button>
+                    <button class="drinksBtn absintheCategory" onclick="visDrinkCategory('absinthe')">Absinthe</button>
+                </div>
+                <div class="drinkCardContainer">
+                    <div id="beerCategory" class="drinkCategory">
+                        <div>
+                            <p>Carlsberg Pilsner</p>
+                            <span>Lille 35,- Stor 50,-</span>
+                        </div>
+                        <div>
+                            <p>Tuborg Classic</p>
+                            <span>Lille 35,- Stor 50,-</span>
+                        </div>
+                        <div>
+                            <p>Grimbergen Blonde</p>
+                            <span>Stor 55,-</span>
+                        </div>
+                        <div>
+                            <p>Grimbergen Ambrée</p>
+                            <span>Stor 55,-</span>
+                        </div>
+                        <div>
+                            <p>Brewmaster IPA</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                        <div>
+                            <p>1664 Blanc</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                        <div>
+                            <p>1664 Blanc Rosé</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                        <div>
+                            <p>1664 Kronenbourg</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                        <div>
+                            <p>Yakima IPA</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                        <div>
+                            <p>Brooklyn u.alkohol</p>
+                            <span>Lille 40,- Stor 60,-</span>
+                        </div>
+                    </div>
+                    <div id="flaskeolCategory" class="drinkCategory">
+                        <div>
+                            <p>Grøn Tuborg</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Ceres Top</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Guld Tuborg</p>
+                            <span>40,-</span>
+                        </div>
+                        <div>
+                            <p>Blå Thor</p>
+                            <span>40,-</span>
+                        </div>
+                        <div>
+                            <p>Carlsberg Elephant</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Gl. Carlsberg Porter</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Brooklyn Lager</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Brooklyn EIPA</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Sol</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Guiness (dåse)</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Cider Nørrebro</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>UDEN ALKOHOLD</p>
+                            <div>
+                                <p>Carlsberg Nordic</p>
+                                <span>35,-</span>
+                            </div>
+                            <div>
+                                <p>1664 Blanc</p>
+                                <span>45,-</span>
+                            </div>
+                        </div>
+
+                        <p>GLUTENFRI</p>
+                        <div>
+                            <p>San Miguel</p>
+                            <span>45,-</span>
+                        </div>
+
+                    </div>
+                    <div id="hvidVinCategory" class="drinkCategory">
+                        <div>
+                            <p>Sauvignon Blanc</p>
+                            <span>Glas 60,- Flaske 270,-</span>
+                        </div>
+                        <div>
+                            <p>Chardonnay/Viognier</p>
+                            <span>Glas 70,- Flaske 330,-</span>
+                        </div>
+                        <div>
+                            <p>Grüner Veltliner</p>
+                            <span>Glas 80,- Flaske 370,-</span>
+                        </div>
+                        <div>
+                            <p>Riesling</p>
+                            <span>Glas 80,- Flaske 370,-</span>
+                        </div>
+                        <div>
+                            <p>Macon</p>
+                            <span>Glas 100,- Flaske 470,-</span>
+                        </div>
+                        <div>
+                            <p>Pinot Gris</p>
+                            <span>Glas 100,- Flaske 470,-</span>
+                        </div>
+                        <div>
+                            <p>Chablis 1.cru</p>
+                            <span>Glas 110,- Flaske 520,-</span>
+                        </div>
+                        <div>
+                            <p>Pouilly-Fuissé</p>
+                            <span>Glas 120,- Flaske 570,-</span>
+                        </div>
+                        <div>
+                            <p>Chateauneuf-du-pape</p>
+                            <span>Glas 120,- Flaske 570,-</span>
+                        </div>
+                    </div>
+                    <div id="roseVinCategory" class="drinkCategory">
+                        <div>
+                            <p>Dom. De Pellehaut</p>
+                            <span>Glas 60,- Flaske 270,-</span>
+                        </div>
+                        <div>
+                            <p>Cinsault-Syrah</p>
+                            <span>Glas 70,- Flaske 330,-</span>
+                        </div>
+                    </div>
+                    <div id="portVinCategory" class="drinkCategory">
+                        <div>
+                            <p>Glas</p>
+                            <span>55,-</span>
+                        </div>
+                        <div>
+                            <p>Flaske</p>
+                            <span>20 cl. 120,-</span>
+                        </div>
+                    </div>
+                    <div id="mousserendeVinCategory" class="drinkCategory">
+                        <div>
+                            <p>Cava</p>
+                            <span>20 cl. 120,-</span>
+                        </div>
+                        <div>
+                            <p>Cava</p>
+                            <span>75 cl. 400,-</span>
+                        </div>
+                        <div>
+                            <p>Champagne</p>
+                            <span>75 cl. 700,-</span>
+                        </div>
+                    </div>
+                    <div id="drinksCategory" class="drinkCategory">
+                        <div>
+                            <p>Gin og Tonic</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Rom og Cola</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Whiskey og Cola</p>
+                            <span>60,-</span>
+                        </div>
+                    </div>
+                    <div id="absintheCategory" class="drinkCategory">
+                        <p>Absinthe drikkes ved at man lader vand fra en fontaine løbe
+                            ned på en hullet ske med sukker og videre ned i glasset med Absinthe.</p>
+                        <span>65,-</span>
+                    </div>
+                    <div id="rødVinCategory" class="drinkCategory">
+                        <div>
+                            <p>Carignan Vieilles Vignes</p>
+                            <span>Glas 60,- Flaske 270,-</span>
+                        </div>
+                        <div>
+                            <p>Côtes du Rhône</p>
+                            <span>Glas 80,- Flaske 370,-</span>
+                        </div>
+                        <div>
+                            <p>Moulin à Vent</p>
+                            <span>Glas 100,- Flaske 470,-</span>
+                        </div>
+                        <div>
+                            <p>Morgon</p>
+                            <span>Glas 100,- Flaske 470,-</span>
+                        </div>
+                        <div>
+                            <p>Crozes Hermitage</p>
+                            <span>Glas 110,- Flaske 520,-</span>
+                        </div>
+                        <div>
+                            <p>Savigny-Les-Baune</p>
+                            <span>Glas 130,- Flaske 620,-</span>
+                        </div>
+                        <div>
+                            <p>Santenay Les Charmes</p>
+                            <span>Glas 130,- Flaske 620,-</span>
+                        </div>
+                        <div>
+                            <p>Chateauneuf-du-pape</p>
+                            <span>Glas 130,- Flaske 620,-</span>
+                        </div>
+                    </div>
+                    <div id="cocktailsCategory" class="drinkCategory">
+                        <div>
+                            <p>Gin Hass</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Lynchbrug Lemonade</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>White Russian</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Russian Mule</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Dark and Stormy</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Negroni</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Red Needle</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Klassisk Daiquiri</p>
+                            <span>75,-</span>
+                        </div>
+                        <div>
+                            <p>Mango Daiquiri</p>
+                            <span>75,-</span>
+                        </div>
+                        <div>
+                            <p>Cosmopolitan</p>
+                            <span>80,-</span>
+                        </div>
+                        <div>
+                            <p>Tequila Sunrise</p>
+                            <span>80,-</span>
+                        </div>
+                        <div>
+                            <p>Bramle</p>
+                            <span>80,-</span>
+                        </div>
+                        <div>
+                            <p>Margarita</p>
+                            <span>85,-</span>
+                        </div>
+                        <div>
+                            <p>Espresso Martini</p>
+                            <span>85,-</span>
+                        </div>
+                        <div>
+                            <p>Bloody Mary</p>
+                            <span>85,-</span>
+                        </div>
+                        <div>
+                            <p>Pina Colada</p>
+                            <span>85,-</span>
+                        </div>
+                        <div>
+                            <p>French 75</p>
+                            <span>85,-</span>
+                        </div>
+
+                        <p>Uden Alkohol</p>
+                        <div>
+                            <p>Carribean Sun</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Paradise Dream</p>
+                            <span>70,-</span>
+                        </div>
+
+                    </div>
+                    <div id="varmeDrikkeCategory" class="drinkCategory">
+                        <div>
+                            <p>Kaffe</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Espresso</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Double Espresso</p>
+                            <span>30,-</span>
+                        </div>
+                        <div>
+                            <p>Curtardo</p>
+                            <span>30,-</span>
+                        </div>
+                        <div>
+                            <p>The</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Caffe Latte</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Chokolade m/u flødeskum</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Cappucino</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Irish Coffee</p>
+                            <span>65,-</span>
+                        </div>
+                        <div>
+                            <p>French Coffee</p>
+                            <span>65,-</span>
+                        </div>
+                        <div>
+                            <p>Mexican Coffee</p>
+                            <span>65,-</span>
+                        </div>
+                    </div>
+                    <div id="romCategory" class="drinkCategory">
+                        <div>
+                            <p>Aarhus Rom</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Santissima 3år</p>
+                            <span>55,-</span>
+                        </div>
+                        <div>
+                            <p>Santissima 7år</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Zacapa</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Prohibido 12år</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Prohibido 23år</p>
+                            <span>70,-</span>
+                        </div>
+                    </div>
+                    <div id="ginCategory" class="drinkCategory">
+                        <div>
+                            <p>Hendricks</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Tanqueray</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Tanqueray Sevilla</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Bombay</p>
+                            <span>55,-</span>
+                        </div>
+                        <div>
+                            <p>Gin Mare</p>
+                            <span>55,-</span>
+                        </div>
+                        <div>
+                            <p>Citadelle</p>
+                            <span>60,-</span>
+                        </div>
+                    </div>
+                    <div id="cognacCategory" class="drinkCategory">
+                        <div>
+                            <p>Braastad</p>
+                            <span>50,-</span>
+                        </div>
+                        <div>
+                            <p>Henri Vsop</p>
+                            <span>55,-</span>
+                        </div>
+                        <div>
+                            <p>Henri VS</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Armagnac</p>
+                            <span>65,-</span>
+                        </div>
+                        <div>
+                            <p>Poire Williams</p>
+                            <span>65,-</span>
+                        </div>
+                    </div>
+                    <div id="shotsCategory" class="drinkCategory">
+                        <div>
+                            <p>Snaps</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Pure Lakrids</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Nordsøolie</p>
+                            <span>25,-</span>
+                        </div>
+                        <div>
+                            <p>Fernet Branca</p>
+                            <span>30,-</span>
+                        </div>
+                        <div>
+                            <p>Arnbitter</p>
+                            <span>30,-</span>
+                        </div>
+                        <div>
+                            <p>Sambuca m/u Tabasco</p>
+                            <span>30,-</span>
+                        </div>
+                        <div>
+                            <p>Tequila</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>After Eight</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>B - 52</p>
+                            <span>35,-</span>
+                        </div>
+                        <div>
+                            <p>Flatliner</p>
+                            <span>35,-</span>
+                        </div>
+                    </div>
+                    <div id="aperitifsCategory" class="drinkCategory">
+                        <div>
+                            <p>Calvados</p>
+                            <span>40,-</span>
+                        </div>
+                        <div>
+                            <p>Pastis</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Pastis Tomate-grenadine</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Pastis Perroquet-mynte</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Pastis Mauresque-mandel</p>
+                            <span>45,-</span>
+                        </div>
+                        <div>
+                            <p>Chartreuse</p>
+                            <span>60,-</span>
+                        </div>
+                        <div>
+                            <p>Americano</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Aperol</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Lillet hvid/Rosé</p>
+                            <span>70,-</span>
+                        </div>
+                        <div>
+                            <p>Campari vand/Appelsin</p>
+                            <span>70,-</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button class="bmBtn">Events</button>
+            <section class="subMenu">
+                <div class="menuContent eventContent eventBaggrund">
+                    <h1>Et overblik over kommende events på Teaterkatten</h1>
+                    <div class="eventContent2">
+                        <section class="eventBilledeRammer">
+                            <h1>Trio</h1>
+                            <p></p>
+                            <p></p>
+                        </section>
+                        <section class="eventBilledeRammer">
+                            <h1>Trio</h1>
+                            <p></p>
+                            <p></p>
+                        </section>
+                    </div>
+            </section>
+            <button class="bmBtn">Book Bord</button>
+            <section class="subMenu">
+                <h1>Indtast følgende oplysninger</h1>
+                <div class="reservationContent">
+                    <form action="mailto:esbenlund3@gmail.com?subject=Bordreservation" method="post"
+                        enctype="text/plain" id="myForm">
+                        <input class="kundeInfo" type="text" name="Navn " placeholder="Indtast navn" required><br>
+                        <input class="kundeInfo" type="email" name="E-mail " placeholder="Indtast din email"
+                            required><br>
+                        <input class="kundeInfo" type="date" name="Dato for reservation " id="Dato" required><br>
+                        <input class="kundeInfo" type="time" name="Tidspunkt for reservation " id="Tid" required>
+                        <input class="kundeInfo" type="number" name="Antal Personer "
+                            placeholder="Hvor mange personer er i?" required><br>
+                        <input class="kundeInfo" type="text" name="Yderligere kommentarer fra kunden "
+                            placeholder="Ydereligere kommentarer?">
+                        <p class="reserveP"><strong>Når din reservation er bekræftet af Teaterkatten vil du modtage en
+                                mail</strong></p>
+                        <input type="submit" class="reserverBtn" value="Reservér">
+                    </form>
+                </div>
+            </section>
+        </nav>
+
+    </nav>
+    
+    <nav class="knapper">
+
+        <div id="menuOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <div class="overlay-content">
+                <div class="menuTitel"> Menu</div>
+                <a class="kaffeKnap drinksBtn" onclick="openKaffe()"> Kaffe</a>
+                <a class="vdKnap drinksBtn" onclick="openVd()"> Varme Drikke</a>
+                <a class="ctnKnap drinksBtn" onclick="openCt()"> Cocktails</a>
+                <a class="oelnKnap drinksBtn" onclick="openOel()"> Øl</a>
+                <a class="vinKnap drinksBtn" onclick="openVin()"> vin</a>
+                <a class="spritKnap drinksBtn" onclick="openSprit()"> Spiritus</a>
+                <a class="absinKnap drinksBtn" onclick="openAbsin()" > Absinthe</a>
+            </div>
+
+       
+       
+        </div>
+
+        <div id="kaffeOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeKaffe()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="vdOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeVd()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="ctOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCt()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="oelOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeOel()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="vinOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeVin()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="spritOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSprit()">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+        </div>
+        <div id="absinOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeAbsin()">&times;</a>
+            <div class="overlay-content">
+                <div id="absintheInfo" >
+                    <p>Absinthe drikkes ved at man lader vand fra en fontaine løbe
+                        ned på en hullet ske med sukker og videre ned i glasset med Absinthe.</p>
+                    <span>65,-</span>
+                </div>
+            </div>
+        </div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <div id="bookOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeBook()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">book</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div id="eventsOverlay" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeEvents()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">events</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="knapperFlex">
+            <div class="menuKnap" onclick="openMenu()"> Menu</div>
+
+            <div class="bookKnap" onclick="openBook()"> Book</div>
+
+            <div class="eventsKnap" onclick="openEvents()"> Events</div>
+        </div>
+
+
+
+
+
+
+    </nav>
+    <div class="forsideImgBox">
+        <img class="forsideImg" src="img/bar2.jpg" alt="Billede af Teaterkattens facade med stole og borde">
+    </div>
+    <main>
+        <article class="introBox">
+            <div class="introText">
+                <p>Træd ind i en verden af smag og stemning, hvor vores café lokker med et bredt udvalg af lækre
+                    drikkevarer, der vil pirre dine smagsløg. Vores passion for kvalitet og æstetik afspejles ikke kun i
+                    vores menu, men også i den unikke indretning.</p>
+            </div>
+        </article>
+
+        <article id="reviewBox">
+            <div class="reviewData">
+                <p class="reviewP">"Altid dejligt at kommer her. Både privat og alene, men også i selvskab, såvel privat
+                    som
+                    forretningsmæssigt" - Claus</p><a
+                    href="https://www.tripadvisor.com/Restaurant_Review-g189530-d11804219-Reviews-Teaterkatten-Aarhus_East_Jutland_Jutland.html"><img
+                        class="reviewLogo" src="img/trip.png" alt="Billede der fører dig til hjemmesiden"></a>
+            </div>
+            <div class="reviewData">
+                <p class="reviewP">"Gode bartendere og mega hyggelig og unik atmosfære" - Tina</p><a
+                    href="https://www.facebook.com/teaterkatten.aarhus/reviews"><img class="reviewLogoF"
+                        src="img/facebook.png" alt="Billede der fører dig til facebook siden med anmeldelser"></a>
+            </div>
+            <div class="reviewData">
+                <p class="reviewP">"Great to sit in Cathedral square and have a beer" - Ian</p><a
+                    href="https://www.facebook.com/teaterkatten.aarhus/reviews"><img class="reviewLogoF"
+                        src="img/facebook.png" alt="Billede der fører dig facebook med anmeldelser"></a>
+            </div>
+            <div class="reviewData">
+                <p class="reviewP">"Altid dejligt at kommer her. Både privat og alene, men også i selvskab, såvel privat
+                    som
+                    forretningsmæssigt" - Simon</p><a
+                    href="https://www.tripadvisor.com/Restaurant_Review-g189530-d11804219-Reviews-Teaterkatten-Aarhus_East_Jutland_Jutland.html"><img
+                        class="reviewLogo" src="img/trip.png" alt="Billede der fører dig til hjemmesiden"></a>
+            </div>
+            <div class="reviewData">
+                <p class="reviewP">"Altid dejligt at kommer her. Både privat og alene, men også i selvskab, såvel privat
+                    som
+                    forretningsmæssigt" - Laura</p><a
+                    href="https://www.tripadvisor.com/Restaurant_Review-g189530-d11804219-Reviews-Teaterkatten-Aarhus_East_Jutland_Jutland.html"><img
+                        class="reviewLogo" src="img/trip.png" alt="Billede der fører dig til hjemmesiden"></a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footerList">
+            <h2>Følg os</h2>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+            </ul>
+        </div>
+        <div class="footerList">
+            <h2>Kontakt os</h2>
+            <ul>
+                <li>Telefon: 12345678</li>
+                <li>Email: info@teaterkatten.com</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="tk.js"></script>
+
+</body>
+
+</html>
