@@ -1,0 +1,516 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+
+    min-width: 350px;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+main{
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+.forsideImgBox{
+position: relative;
+width: 100%;
+height:300px;
+overflow: hidden;
+}
+.forsideImg{
+    z-index: 1;
+    height: 300px;
+    min-width: 100%; 
+    margin-bottom: 3rem;
+}
+/* her er stylingen til de 3 streger som former former brugermenuen*/
+.burgerContainer {
+    width: 100%;
+    position: absolute;
+    left:0;
+    z-index: 999;
+    min-width: 350px;
+    overflow-y: scroll;
+}
+.streg {
+    display: block;
+    height: 0.25rem;
+    background: #222;
+}
+.burgerMenu {
+    display: none;
+    position: relative;
+    height: 1.6rem;
+    width: 2rem;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.checkbox {
+    position: absolute;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+    opacity: 0;
+    z-index: 999;
+}
+/* denne form for animation er med inspiration fra min sidste (esben eksamensopgave) */
+.stregTop {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+.stregMidt {
+    transition: transform 0.2s ease-in-out;
+}
+.stregBund {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+.burgerContainer input[type="checkbox"]:checked~.burgerMenuContent {
+    transform: translateX(0);
+}
+.burgerContainer input[type="checkbox"]:checked~.burgerMenu .stregTop {
+    transform: rotate(45deg);
+}
+.burgerContainer input[type="checkbox"]:checked~.burgerMenu .stregMidt {
+    transform: scaleY(0);
+}
+.burgerContainer input[type="checkbox"]:checked~.burgerMenu .stregBund {
+    transform: rotate(-45deg);
+}
+/* Styling til burgermenu med inhold som skal folde sig ud starter her. stylingen her er til mobil device*/
+.bmBtn {
+    background-color: rgba(255, 255, 255, 0.871);
+    color: #222;
+    border: none;
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+.subMenu {
+    display: none;
+    width: 100%;
+}
+.menuContent {
+    width: 100%;
+    overflow-y: scroll;
+}
+/* styling til den form som giver mulighed for at book bord hos teaterkatten */
+.kundeInfo {
+    width: 20rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    color: black;
+    height: 1.5rem;
+    border: 1px solid black;
+}
+.reserverBtn {
+    width: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 2.3rem;
+    font-size: 1.5rem;
+    background-color: #111;
+    color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.reservationContent{
+background-color:white;
+margin-bottom: 2rem;
+}
+/* styling til den funktion der gør det muligt at se menukortet*/
+.drinksMenu{
+background-image: url(img/tavlebaggrund.png);
+}
+.drinkCardContainer{
+   margin-top: 1rem;
+}
+.drinkCategory{
+font-family: "chalky";
+font-weight: lighter;
+font-style: normal;
+color: #ffffff;
+font-size: 1.3rem;
+line-height: 1.8rem;
+display: none;
+text-align: left;
+
+}
+.drinksBtn{
+width: 42%;
+font-family: "chalky";
+background: #1111116e;
+color: white;
+font-size: 1.6rem;
+border: 1px solid rgba(255, 255, 255, 0);
+padding-top: 0.5rem;
+}
+
+.drinkCategory div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .drinkCategory div p {
+    text-align: left;
+  }
+
+  .drinkCategory div span {
+    text-align: right;
+  }
+/* styling til event content, her vil man kunne se de forskellige kommende events på teaterkatten*/
+.eventContent {
+    background-color: rgb(174, 32, 32);
+    color: white;
+    width: 100%;
+    height: 25rem;
+}
+.eventBaggrund {
+    background-image: url(img/eventbaggrund.png);
+}
+.eventContent2{
+width: 80%;
+margin-left: 10%;
+margin-right: 10%;
+}
+/* start på styling som ligger i main tag*/
+/*background-color:rgb(174, 32, 32);*/
+.introBox{
+    background-color:#111;
+    width: 100%;
+    color: white;
+    line-height: 1.4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Her kommer der styling til de reviews der kommer på siden, som deres kunder har sendt på bla facebook */
+#reviewBox{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1rem;
+    height: 7rem;
+    color: #222;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.115);
+    box-shadow: #222 1px 3px 6px 1px ;
+}
+.reviewData{
+text-align: center;
+
+}
+.reviewData a{
+    color: black;
+    
+}
+.reviewP{
+    padding-top: 1rem;
+    font-style: italic;
+}
+.reviewLogo{
+    width: 45px;
+    height: 50px;
+}
+.reviewLogoF{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.5rem;
+    
+}
+
+/* Css til mobil-footer starter her*/
+/* footerpcmap, skal ikke være synlig på mobil. men skal være synlig på desktop, hvor man kan se et kort hvor teaterkatten ligger*/
+.footerPcMap{
+    display: none;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #222;
+    max-width: 100%;
+    color: white;
+    margin-top: 3rem;
+    height: 8rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.footerList{
+    margin-top: 1rem;
+    
+}
+
+@media only screen and (max-width: 900px){
+    
+
+
+
+    .burgerMenuContent {
+        display: block;
+        position: relative;
+        margin-top: 1.4rem;
+        width: 100%;
+        transform: translate(-100%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.7s ease-in-out;
+        text-align: center;
+        z-index: 999;
+
+
+    }
+
+} 
+
+@media only screen and (min-width: 900px){
+    
+
+    .burgerMenu {
+        display: none;
+    }
+
+    .bmBtn {
+        background-color:#ffffff00
+    }
+.burgerContainer{
+    overflow: hidden;
+    height: 3.2rem;
+    background-color: #ffffff00;
+}
+    .burgerMenuContent {
+
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        text-align: center;
+        z-index: 999;
+
+
+    }
+
+ .drinksMenu {
+background-image: url(img/tavlebaggrund.png);
+
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 3.2rem;
+    width: 34%;
+    height: 100%;
+
+}
+.eventMenu {
+
+    
+        position: fixed;
+        margin: 0;
+        left: 34%;
+        top: 3.2rem;
+        width: 34%;
+        height: 100%;
+    
+    }
+
+    .eventContent {
+        height: 100%;
+
+    }
+  .bookMenu {
+        
+    position: fixed;
+            margin: 0;
+            left: 68%;
+            top: 3.2rem;
+            width: 34%;
+            height: 1080px;
+        
+        }
+            
+        .reservationContent {
+            height: 100%;
+            background-color: #ffffffd0;
+        }
+
+.subMenu {
+    overflow-y: scroll;
+ 
+
+
+}
+.drinkCardContainer {
+    position: fixed;
+
+    margin: 0;
+   
+    top:3.2rem;
+    left:32%;
+    width:68%;
+    height:100%;
+}
+.drinkCategory div p {
+margin-left: 20%;
+
+}
+.drinkCategory div span {
+    margin-right: 20%;
+    
+    }
+
+    .drinkCategory  {
+        padding: 5%;
+        display: none;
+        background-image: url(img/tavlebaggrund.png);
+        height: 100%;
+
+        }
+
+
+
+}
